@@ -1,0 +1,174 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: $white-be;
+  .all_project {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    @include transition($t);
+    &-child {
+      height: 90vh;
+      .imageProd {
+        position: relative;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        &::before {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          background: rgba(0, 0, 0, 0.5);
+          transform: scale(0.8);
+          opacity: 0;
+          content: "";
+          @include transition($t);
+        }
+        .info {
+          cursor: pointer;
+          position: absolute;
+          z-index: 2;
+          @include mid();
+          text-align: center;
+          opacity: 0;
+          @include transition($t);
+          .nameProd {
+            transform: translateY(-60%);
+            @include transition($t);
+            @include text(42px, "EB", normal, $white-cl, uppercase);
+          }
+          .btn {
+            transform: scale(0.8);
+            @include transition($t);
+            @include text(15px, "EB", normal, $white-cl, uppercase);
+          }
+        }
+        &:hover {
+          .info {
+            opacity: 1;
+            .nameProd {
+              transform: translateY(0%);
+            }
+            .btn {
+              transform: scale(1);
+            }
+          }
+          &::before {
+            cursor: pointer;
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+  .active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    @include transition($t);
+  }
+  .contact {
+    width: 100vw;
+    height: 100vh;
+    background-color: $black-cl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .content {
+      @include text(18px, "EB", normal, $white-cl, normal);
+      .des {
+        font-size: 22px;
+        margin-bottom: 15px;
+        opacity: 0.5;
+      }
+      .big {
+        font-size: 42px;
+      }
+      .email p {
+        text-transform: uppercase;
+        opacity: 0.5;
+        @include transition($t);
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .social {
+        margin-top: 40px;
+        span {
+          opacity: 0.5;
+        }
+        .all {
+          display: flex;
+          a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $white-cl;
+            opacity: 0.5;
+            font-size: 20px;
+            margin-right: 15px;
+            @include transition($t);
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slider {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $white-cl;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10vh 0;
+    @include transition($t);
+    .listImage {
+      height: 100%;
+      overflow: hidden;
+      display: none;
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+      /* Fade CSS */
+      .flickity-slider {
+        transform: none !important;
+      }
+      .carousel-cell {
+        left: 0 !important;
+        transform: none !important;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: -1;
+      }
+      .carousel-cell.is-selected {
+        opacity: 1;
+        z-index: 0;
+      }
+    }
+    .showSlider {
+      display: block;
+    }
+  }
+  .activeSlider {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.removeScroll {
+  overflow: hidden;
+}
