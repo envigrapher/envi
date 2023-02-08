@@ -5,6 +5,14 @@ $(document).ready(function () {
   var tabViewMobile = $(".nav-mobile span").get();
   tabView.forEach((element, index) => {
     element.addEventListener("click", function () {
+      if (index == 3) {
+        $(".nav").addClass("activeContact");
+        $(".logo").addClass("activeLogoContact");
+      }
+      else{
+        $(".nav").removeClass("activeContact");
+        $(".logo").removeClass("activeLogoContact");
+      }
       $(".nav span").removeClass("active");
       element.classList.add("active");
       var contentShow = document.querySelectorAll(".contentShow > *")[index];
@@ -68,6 +76,40 @@ $(document).ready(function () {
     $(".slider").removeClass("activeSlider");
     $("body").removeClass("removeScroll");
   });
+  $(".slider__close").on("click", function () {
+    $(".slider").removeClass("activeSlider");
+    $("body").removeClass("removeScroll");
+    if($(".all_project-child > *").hasClass("ascentia")){
+      $(".ascentia").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("stories")){
+      $(".stories").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("vista")){
+      $(".vista").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("hoarient")){
+      $(".hoarient").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("auguda")){
+      $(".auguda").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("bemind")){
+      $(".bemind").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("lixi")){
+      $(".lixi").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("zenyum")){
+      $(".zenyum").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("uve")){
+      $(".uve").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("kadon")){
+      $(".kadon").removeClass("showSlider");
+    }
+  });
   $(".listImage").flickity({
     // options
     fade: true,
@@ -75,7 +117,7 @@ $(document).ready(function () {
     cellAlign: "center",
     contain: true,
     prevNextButtons: true,
-    wrapAround: false,
+    wrapAround: true,
     draggable: true,
     dragThreshold: 50,
     lazyLoad: 1,
@@ -114,13 +156,13 @@ function checkLogoLoaded() {
   function allImagesLoaded() {
     setTimeout(function () {
       $(".loading-content img").addClass("showContent");
-    }, 3000);
+    }, 1000);
     setTimeout(function () {
       $(".loading-img").addClass("moveOut");
       $(".loading-content").addClass("activeContent");
-    }, 5000);
+    }, 3000);
     setTimeout(function () {
       $(".loading").addClass("hideLoading");
-    }, 11000);
+    }, 9000);
   }
 }

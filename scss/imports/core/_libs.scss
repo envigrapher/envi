@@ -33,6 +33,8 @@ https://flickity.metafizzy.co
   background: $white-cl;
   border: none;
   color: #333;
+  opacity: 0.8;
+  cursor: pointer;
 }
 .flickity-button:hover {
   background: #fff;
@@ -42,10 +44,10 @@ https://flickity.metafizzy.co
   box-shadow: 0 0 0 5px #19f;
 }
 .flickity-button:active {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .flickity-button:disabled {
-  opacity: 0.3;
+  opacity: 0.1;
   pointer-events: none;
 }
 .flickity-button-icon {
