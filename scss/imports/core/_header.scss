@@ -74,6 +74,11 @@ header {
     cursor: pointer;
     transition: $t;
     z-index: 3;
+    &.activeContactBtn{
+      span{
+        background-color: black;
+      }
+    }
     span {
       position: absolute;
       width: 100%;

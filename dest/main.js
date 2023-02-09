@@ -24,6 +24,14 @@ $(document).ready(function () {
   tabViewMobile.forEach((element, index) => {
     element.addEventListener("click", function () {
       $(".nav-mobile span").removeClass("active");
+      if (index == 3) {
+        $(".logo").addClass("activeLogoContact");
+        $(".hamburger-btn").addClass("activeContactBtn");
+      }
+      else{
+        $(".logo").removeClass("activeLogoContact");
+        $(".hamburger-btn").removeClass("activeContactBtn");
+      }
       element.classList.add("active");
       var contentShow = document.querySelectorAll(".contentShow > *")[index];
       let contentInActive = document.querySelector(".contentShow .active");
@@ -59,6 +67,9 @@ $(document).ready(function () {
       className.contains("misssaigon")
       ? $(".misssaigon").addClass("showSlider")
       : $(".misssaigon").removeClass("showSlider");
+      className.contains("misssaigon2")
+      ? $(".misssaigon2").addClass("showSlider")
+      : $(".misssaigon2").removeClass("showSlider");
       className.contains("hoarient")
       ? $(".hoarient").addClass("showSlider")
       : $(".hoarient").removeClass("showSlider");
@@ -83,9 +94,15 @@ $(document).ready(function () {
     className.contains("uve")
       ? $(".uve").addClass("showSlider")
       : $(".uve").removeClass("showSlider");
+      className.contains("dinhdoclap")
+      ? $(".dinhdoclap").addClass("showSlider")
+      : $(".dinhdoclap").removeClass("showSlider");
     className.contains("kadon")
       ? $(".kadon").addClass("showSlider")
       : $(".kadon").removeClass("showSlider");
+      className.contains("ttd")
+      ? $(".ttd").addClass("showSlider")
+      : $(".ttd").removeClass("showSlider");
   });
   $(".close-mobile").on("click", function () {
     $(".slider").removeClass("activeSlider");
@@ -112,6 +129,9 @@ $(document).ready(function () {
     if($(".all_project-child > *").hasClass("misssaigon")){
       $(".misssaigon").removeClass("showSlider");
     }
+    if($(".all_project-child > *").hasClass("misssaigon2")){
+      $(".misssaigon2").removeClass("showSlider");
+    }
     if($(".all_project-child > *").hasClass("hoarient")){
       $(".hoarient").removeClass("showSlider");
     }
@@ -136,8 +156,14 @@ $(document).ready(function () {
     if($(".all_project-child > *").hasClass("uve")){
       $(".uve").removeClass("showSlider");
     }
+    if($(".all_project-child > *").hasClass("dinhdoclap")){
+      $(".dinhdoclap").removeClass("showSlider");
+    }
     if($(".all_project-child > *").hasClass("kadon")){
       $(".kadon").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("ttd")){
+      $(".ttd").removeClass("showSlider");
     }
   });
   $(".listImage").flickity({
