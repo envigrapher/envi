@@ -44,21 +44,36 @@ $(document).ready(function () {
     className.contains("ascentia")
       ? $(".ascentia").addClass("showSlider")
       : $(".ascentia").removeClass("showSlider");
+      className.contains("hola")
+      ? $(".hola").addClass("showSlider")
+      : $(".hola").removeClass("showSlider");
       className.contains("stories")
       ? $(".stories").addClass("showSlider")
       : $(".stories").removeClass("showSlider");
       className.contains("vista")
       ? $(".vista").addClass("showSlider")
       : $(".vista").removeClass("showSlider");
+      className.contains("normad")
+      ? $(".normad").addClass("showSlider")
+      : $(".normad").removeClass("showSlider");
+      className.contains("misssaigon")
+      ? $(".misssaigon").addClass("showSlider")
+      : $(".misssaigon").removeClass("showSlider");
       className.contains("hoarient")
       ? $(".hoarient").addClass("showSlider")
       : $(".hoarient").removeClass("showSlider");
+      className.contains("hoarient2")
+      ? $(".hoarient2").addClass("showSlider")
+      : $(".hoarient2").removeClass("showSlider");
     className.contains("auguda")
       ? $(".auguda").addClass("showSlider")
       : $(".auguda").removeClass("showSlider");
     className.contains("bemind")
       ? $(".bemind").addClass("showSlider")
       : $(".bemind").removeClass("showSlider");
+      className.contains("diamond")
+      ? $(".diamond").addClass("showSlider")
+      : $(".diamond").removeClass("showSlider");
     className.contains("lixi")
       ? $(".lixi").addClass("showSlider")
       : $(".lixi").removeClass("showSlider");
@@ -82,20 +97,35 @@ $(document).ready(function () {
     if($(".all_project-child > *").hasClass("ascentia")){
       $(".ascentia").removeClass("showSlider");
     }
+    if($(".all_project-child > *").hasClass("hola")){
+      $(".hola").removeClass("showSlider");
+    }
     if($(".all_project-child > *").hasClass("stories")){
       $(".stories").removeClass("showSlider");
     }
     if($(".all_project-child > *").hasClass("vista")){
       $(".vista").removeClass("showSlider");
     }
+    if($(".all_project-child > *").hasClass("normad")){
+      $(".normad").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("misssaigon")){
+      $(".misssaigon").removeClass("showSlider");
+    }
     if($(".all_project-child > *").hasClass("hoarient")){
       $(".hoarient").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("hoarient2")){
+      $(".hoarient2").removeClass("showSlider");
     }
     if($(".all_project-child > *").hasClass("auguda")){
       $(".auguda").removeClass("showSlider");
     }
     if($(".all_project-child > *").hasClass("bemind")){
       $(".bemind").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("diamond")){
+      $(".diamond").removeClass("showSlider");
     }
     if($(".all_project-child > *").hasClass("lixi")){
       $(".lixi").removeClass("showSlider");
