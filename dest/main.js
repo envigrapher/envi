@@ -1,6 +1,7 @@
 // Splitting();
 $(document).ready(function () {
   console.log("ready!");
+  // handle nav menu
   var tabView = $(".nav span").get();
   var tabViewMobile = $(".nav-mobile span").get();
   tabView.forEach((element, index) => {
@@ -41,15 +42,17 @@ $(document).ready(function () {
       $(".hidden-nav").removeClass("active-nav ");
     });
   });
+  // handle click hambuger button
   $(".hamburger-btn").on("click", function () {
     $(".hamburger-btn").toggleClass("active");
     $(".hidden-nav").toggleClass("active-nav ");
   });
+  // handle click project
   $(".all_project-child > *").on("click", function () {
     $(".slider").addClass("activeSlider");
     $("body").addClass("removeScroll");
     var className = this.classList;
-    className.contains("ascentia")
+      className.contains("ascentia")
       ? $(".ascentia").addClass("showSlider")
       : $(".ascentia").removeClass("showSlider");
       className.contains("hola")
@@ -76,38 +79,51 @@ $(document).ready(function () {
       className.contains("hoarient2")
       ? $(".hoarient2").addClass("showSlider")
       : $(".hoarient2").removeClass("showSlider");
-    className.contains("auguda")
+      className.contains("auguda")
       ? $(".auguda").addClass("showSlider")
       : $(".auguda").removeClass("showSlider");
-    className.contains("bemind")
+      className.contains("bemind")
       ? $(".bemind").addClass("showSlider")
       : $(".bemind").removeClass("showSlider");
       className.contains("diamond")
       ? $(".diamond").addClass("showSlider")
       : $(".diamond").removeClass("showSlider");
-    className.contains("lixi")
+      className.contains("lixi")
       ? $(".lixi").addClass("showSlider")
       : $(".lixi").removeClass("showSlider");
       className.contains("zenyum")
       ? $(".zenyum").addClass("showSlider")
       : $(".zenyum").removeClass("showSlider");
-    className.contains("uve")
+      className.contains("uve")
       ? $(".uve").addClass("showSlider")
       : $(".uve").removeClass("showSlider");
       className.contains("dinhdoclap")
       ? $(".dinhdoclap").addClass("showSlider")
       : $(".dinhdoclap").removeClass("showSlider");
-    className.contains("kadon")
+      className.contains("kadon")
       ? $(".kadon").addClass("showSlider")
       : $(".kadon").removeClass("showSlider");
       className.contains("ttd")
       ? $(".ttd").addClass("showSlider")
       : $(".ttd").removeClass("showSlider");
+      className.contains("annam")
+      ? $(".annam").addClass("showSlider")
+      : $(".annam").removeClass("showSlider");
+      className.contains("ohhi")
+      ? $(".ohhi").addClass("showSlider")
+      : $(".ohhi").removeClass("showSlider");
+      className.contains("prestige")
+      ? $(".prestige").addClass("showSlider")
+      : $(".prestige").removeClass("showSlider");
+      className.contains("meihome")
+      ? $(".meihome").addClass("showSlider")
+      : $(".meihome").removeClass("showSlider");
   });
   $(".close-mobile").on("click", function () {
     $(".slider").removeClass("activeSlider");
     $("body").removeClass("removeScroll");
   });
+  // handle close slider
   $(".slider__close").on("click", function () {
     $(".slider").removeClass("activeSlider");
     $("body").removeClass("removeScroll");
@@ -164,6 +180,18 @@ $(document).ready(function () {
     }
     if($(".all_project-child > *").hasClass("ttd")){
       $(".ttd").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("annam")){
+      $(".annam").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("ohhi")){
+      $(".ohhi").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("prestige")){
+      $(".prestige").removeClass("showSlider");
+    }
+    if($(".all_project-child > *").hasClass("meihome")){
+      $(".meihome").removeClass("showSlider");
     }
   });
   $(".listImage").flickity({
